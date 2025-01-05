@@ -33,7 +33,7 @@
     --accent-orange-light: #75501B;
 
     /* Font Inter tight  */
-    --Title: 700 24px/32px "Inter Tight", serif;
+    --Title: 700 32px/24px "Inter Tight", serif;
 
     /* Fonte Inter */
     --paragraph-medium: 500 14px/24px "Inter", serif;
@@ -44,3 +44,21 @@
     --link: 500 12px/16px "Inter", serif;    
 }
 
+body {
+    background-color: var(--background-secondary);
+}
+
+main {
+    border: solid yellow;
+    max-width: 1280px;
+    min-width: 375px;
+    margin: 0 auto;
+    padding: 80px;
+}
+
+/* mobile */
+@media (width < 900px) {
+    main {
+        padding: 20px 12px;
+    }
+  }

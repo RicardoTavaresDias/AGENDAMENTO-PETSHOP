@@ -1,0 +1,22 @@
+.logo {
+  width: fit-content;
+  /* border: solid red; */
+  background-color: #2E2C30;
+  padding: 12px 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 20px;
+  height: 20px;
+}
+
+.logo span {
+  font: var(--label-large);
+  color: var(--content-brand);
+  text-transform: uppercase;
+}
