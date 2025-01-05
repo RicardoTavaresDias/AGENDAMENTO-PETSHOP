@@ -282,12 +282,17 @@
             main.classList.add("screen")
             buttonPrimary.classList.add("display")
             aside.classList.remove("display")
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
         })
         buttonSegundary.addEventListener("click", () => {
             main.classList.remove("screen")
             buttonPrimary.classList.remove("display")
             aside.classList.add("display")
         })
+       
     </script>
     
 </body>
