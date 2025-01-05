@@ -30,7 +30,7 @@
         <span>Mundo pet</span>
     </div>
 
-    <main class="screen">
+    <main class="">
 
         <header>
             <div>
@@ -220,7 +220,7 @@
 
     </main>
 
-    <aside>
+    <aside class="display">
         <div class="header">
             <h2>Agende um atendimento</h2>
             <p>Preencha os dados do cliente para realizar o agendamento:</p>
@@ -271,6 +271,24 @@
 
     </aside>
     
-    <button id="schedule" class="schedule display" type="submit">novo agendamento</button>
+    <button id="schedule" class="schedule " type="submit">novo agendamento</button>
+
+    <script>
+        const main = document.querySelector("main")
+        const aside = document.querySelector("aside")
+        const buttonPrimary = document.querySelector("#schedule")
+        const buttonSegundary = document.querySelector("#button")
+        buttonPrimary.addEventListener("click", () => {
+            main.classList.add("screen")
+            buttonPrimary.classList.add("display")
+            aside.classList.remove("display")
+        })
+        buttonSegundary.addEventListener("click", () => {
+            main.classList.remove("screen")
+            buttonPrimary.classList.remove("display")
+            aside.classList.add("display")
+        })
+    </script>
+    
 </body>
 </html>
