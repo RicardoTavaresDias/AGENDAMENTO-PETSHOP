@@ -14,10 +14,11 @@ button:hover {
 }
 
 .schedule {
+  border: solid red;
   display: flex;
   justify-self: end;
   margin-right: 30px;
-  margin-top: 18px;
+  margin-block: 18px 40px;
 }
 
 .display {
