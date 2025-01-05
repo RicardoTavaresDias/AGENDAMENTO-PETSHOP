@@ -49,7 +49,7 @@ body {
 }
 
 main {
-    border: solid yellow;
+    /* border: solid yellow; */
     max-width: 1280px;
     min-width: 375px;
     margin: 0 auto;

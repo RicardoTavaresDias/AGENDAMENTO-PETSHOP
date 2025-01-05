@@ -1,0 +1,115 @@
+section {
+  /* border: solid blue; */
+  color: #fff;
+  margin-bottom: 12px;
+  /* padding: 0 20px; */
+  background-color: var(--background-tertiary);
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+
+section:nth-last-child(3) {
+  margin-top: 32px; 
+}
+
+section .container {
+  /* border: solid pink; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #6666666a;
+  /* margin-bottom: 20px; */
+}
+
+section .container div {
+  /* border: solid red; */
+  display: flex;
+  gap: 12px;
+}
+
+section .container div h3 {
+  font: var(--label-large);
+  color: var(--content-primary);
+}
+
+section .container div h2 {
+  font: var(--label-large);
+  color: var(--content-secondary);
+}
+
+section .containerHours {
+  /* border: solid green; */
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #6666666a;
+}
+
+section .containerHours:last-child {
+  border: none;
+}
+
+section .containerHours .hours {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding-inline: 12px;
+}
+
+section .containerHours .hours .hour{
+  color: var(--content-primary);
+  font: var(--label-medium);
+}
+
+section .containerHours .users {
+  /* border: solid red; */
+  display: flex;
+  gap: 4px;
+  font: var(--label-small);
+  color: var(--content-primary);
+}
+
+section .containerHours .users p {
+  color: var(--content-secondary);
+  font: var(--paragraph-small);
+}
+
+section .containerHours .service {
+  font: var(--paragraph-small);
+  color: var(--content-secondary);
+  align-self: center;
+}
+
+section .containerHours .close {
+  font: var(--paragraph-small);
+  color: var(--content-tertiary);
+  align-self: center;
+}
+
+section .containerHours .close a {
+  text-decoration: none;
+  font: var(--paragraph-small);
+  color: var(--content-tertiary);
+}
+
+
+/* mobile */
+@media (width < 900px) {
+  section .containerHours {
+    /* border: solid red; */
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding: 0; */
+  }
+
+  section .containerHours .service {
+    align-self: start;
+    margin-left: 10px;
+  }
+  
+  section .containerHours .close {
+    align-self: end;
+    margin-top: 8px;
+  }
+}
