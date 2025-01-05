@@ -31,15 +31,22 @@ aside form {
 }
 
 .selectHourDate {
-  /* border: solid red; */
   display: flex;
   margin-block: 0 28px;
   gap: 16px; 
 }
+.selectHourDate div:nth-child(1){
+  position: relative;
+}
 
+.selectHourDate img[src*="seta.svg"] {
+  position: absolute;
+  top: 65%;
+  right: 6%;
+  
+}
 
 .selectHourDate div:nth-child(2) {
-  /* border: solid red; */
   position: relative;
 }
 

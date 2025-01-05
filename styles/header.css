@@ -5,24 +5,38 @@ header {
   align-items: center;
 }
 
-header h1{
+header h1 {
   font: var(--Title);
   color: var(--content-primary);
 }
 
-header p{
+header p {
   font: var(--paragraph-medium);
   color: var(--content-secondary);
   margin-top: 15px;
   /* font-size: 20px; */
 }
 
+header .date div{
+  position: relative;
+}
+
+header .date img {
+  position: absolute;
+  top: 49%;
+  right: 4.2%;
+}
+
 header input[type="date"] {
    width: 172px;
+   padding-left: 35px;
 
-   &::-webkit-calendar-picker-indicator {
-    margin-right: 4px;
-   }
+    &::-webkit-calendar-picker-indicator {
+     margin-right: 4px;
+      width: 20px;
+      height: 20px;
+      opacity: 0; 
+    }  
 }
 
 /* mobile */

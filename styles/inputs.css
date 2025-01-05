@@ -75,10 +75,14 @@ input[type="date"], select{
   background-position: 6%;
   font: var(--label-large); 
     &::-webkit-calendar-picker-indicator {
-      background-image: url(../assets/icon/seta.svg);
-      background-position: 0;
+      width: 20px;
+      height: 20px;
+      opacity: 0;
       margin-right: 8px;
       cursor: pointer;
+      position: absolute;
+      right: 0;
+      z-index: 1;
     }
 }
 

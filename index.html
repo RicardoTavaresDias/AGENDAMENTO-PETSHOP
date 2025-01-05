@@ -30,7 +30,7 @@
         <span>Mundo pet</span>
     </div>
 
-    <main class="">
+    <main>
 
         <header>
             <div>
@@ -38,8 +38,12 @@
                 <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
             </div>
 
-            <div>
-                <input id="date" type="date">
+            <div class="date">
+                <div>
+                    <input id="date" type="date">
+                    <img src="./assets/icon/seta.svg">  
+                </div>
+                
             </div>
         </header>
 
@@ -252,6 +256,7 @@
                 <div>
                     <label>Data</label>
                     <input type="date">
+                    <img src="./assets/icon/seta.svg">
                 </div>
                 <div>
                     <label>Hora</label>
@@ -265,7 +270,7 @@
             </div>
 
             <div class="button">
-                <button type="submit">agendar</button>
+                <button type="submit" onclick="asideClose()">agendar</button>
             </div>
         </form>
 
@@ -287,11 +292,11 @@
                 behavior: 'auto'
             })
         })
-        buttonSegundary.addEventListener("click", () => {
+        function asideClose() {
             main.classList.remove("screen")
             buttonPrimary.classList.remove("display")
             aside.classList.add("display")
-        })
+        }
        
     </script>
     
