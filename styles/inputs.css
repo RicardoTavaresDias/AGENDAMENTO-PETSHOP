@@ -1,0 +1,30 @@
+button {
+  border: none;
+  background-color: var(--content-brand);
+  font: var(--label-large);
+  color: #050505;
+  border-radius: 8px;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #BDB4FA;
+}
+
+#schedule {
+  display: flex;
+  justify-self: end;
+  margin-right: 30px;
+  margin-top: 18px;
+}
+
+/* mobile */
+@media (width < 900px) {
+  #schedule {
+    justify-self:center;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}

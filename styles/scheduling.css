@@ -8,7 +8,7 @@ section {
   padding-bottom: 20px;
 }
 
-section:nth-last-child(3) {
+section.morning {
   margin-top: 32px; 
 }
 
