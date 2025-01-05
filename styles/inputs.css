@@ -13,18 +13,114 @@ button:hover {
   background-color: #BDB4FA;
 }
 
-#schedule {
+.schedule {
   display: flex;
   justify-self: end;
   margin-right: 30px;
   margin-top: 18px;
 }
 
+.display {
+  display: none;
+}
+
+form div {
+margin-top: 16px;
+}
+
+input, textarea, select {
+  width: 397px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1.5px solid var(--content-secondary);
+  color: var(--content-secondary);
+  background-color: var(--border-primary);
+  margin-top: 4px;
+}
+
+textarea { 
+  height: 83px;
+  background-color: #3e3c413f;
+  padding: 12px;
+}
+
+input[type="text"]  {
+  padding-left: 40px;
+}
+
+#name {
+  background: url(../assets/icon/user.svg);
+  background-repeat: no-repeat;
+  background-position: 3%;
+}
+
+#namePet {
+  background: url(../assets/icon/paw.svg);
+  background-repeat: no-repeat;
+  background-position: 3%;
+}
+
+#phone {
+  background: url(../assets/icon/phone.svg);
+  background-repeat: no-repeat;
+  background-position: 3%;
+}
+
+input[type="date"], select{
+  width: 190.5px;
+  height: 48px;
+  padding-left: 35px;
+  background: url(../assets/icon/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: 6%;
+  font: var(--label-large); 
+    &::-webkit-calendar-picker-indicator {
+      background-image: url(../assets/icon/seta.svg);
+      background-position: 0;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+}
+
+select {
+  background: url(../assets/icon/seta.svg);
+  -webkit-appearance:none; 
+  background-repeat: no-repeat;
+  background-position: 95%;
+  cursor: pointer;
+}
+
+
+label {
+  font: var(--label-medium);
+  color: var(--content-primary);
+}
+
+form .button {
+  justify-self: end;
+}
+
+
+
 /* mobile */
 @media (width < 900px) {
-  #schedule {
+  .schedule {
     justify-self:center;
     margin-right: 0;
     margin-bottom: 20px;
+  }
+
+  input, textarea, select {
+    width: 310px;
+  }
+  
+  input[type="date"], select{
+    width: 310px;
+    padding-left: 45px;
+    background-position: 4%;
+  }
+
+  select {
+    background-position: 95%;
   }
 }

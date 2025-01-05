@@ -33,7 +33,7 @@
     --accent-orange-light: #75501B;
 
     /* Font Inter tight  */
-    --Title: 700 32px/24px "Inter Tight", serif;
+    --Title: 700 24px/32px "Inter Tight", serif;
 
     /* Fonte Inter */
     --paragraph-medium: 500 14px/24px "Inter", serif;
@@ -55,6 +55,11 @@ main {
     margin: 0 auto;
     padding-inline: 80px;
     padding-block: 80px 0;
+    position: relative;
+}
+
+.screen {
+    filter: blur(3px);
 }
 
 /* mobile */

@@ -1,0 +1,68 @@
+aside {
+  /* border: solid yellow; */
+  width: 477px;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 80px auto;
+  border-radius: 12px;
+  background-color: #46474E;
+  color: var(--content-primary);
+  padding: 40px;
+}
+
+aside .header h2 {
+  font: var(--Title);
+  color: var(--content-primary);
+}
+
+aside .header p {
+  font: var(--paragraph-medium);
+  color: var(--content-secondary);
+  margin-top: 4px;
+}
+
+
+aside form {
+  margin-top: 28px;
+}
+
+.selectHourDate {
+  /* border: solid red; */
+  display: flex;
+  margin-block: 0 28px;
+  gap: 16px; 
+}
+
+
+.selectHourDate div:nth-child(2) {
+  /* border: solid red; */
+  position: relative;
+}
+
+img[src*="clock.svg"] {
+  width: 24px;
+  position: absolute;
+  top: 52%;
+  left: 3%;
+}
+
+
+/* mobile */
+@media (width < 900px) {
+
+  aside {
+    /* border: solid yellow; */
+    width: 350px;
+    padding: 20px;
+  }
+
+  .selectHourDate {
+    flex-direction: column;  
+    gap: 0px; 
+  }
+}
+

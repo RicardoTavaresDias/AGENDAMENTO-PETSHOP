@@ -23,13 +23,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
     <div class="logo">
         <img src="./assets/icon/pet.svg" alt="">
         <span>Mundo pet</span>
     </div>
 
-    <main>
+    <main class="screen">
 
         <header>
             <div>
@@ -219,6 +220,57 @@
 
     </main>
 
-    <button id="schedule" type="submit">novo agendamento</button>
+    <aside>
+        <div class="header">
+            <h2>Agende um atendimento</h2>
+            <p>Preencha os dados do cliente para realizar o agendamento:</p>
+        </div>
+
+        <form>
+
+            <div>
+                <label>Nome do tutor</label>
+                <input type="text" id="name" placeholder="Nome">
+            </div>
+
+            <div>
+                <label>Nome do pet</label>
+                <input type="text" id="namePet" placeholder="Animal">
+            </div>
+
+            <div>
+                <label>Telefone</label>
+                <input type="text" id="phone" placeholder="(00) 0 0000-0000">
+            </div>
+
+            <div>
+                <label>Descrição do serviço</label>
+                <textarea placeholder="Banho e tosa"></textarea>
+            </div>
+
+            <div class="selectHourDate">
+                <div>
+                    <label>Data</label>
+                    <input type="date">
+                </div>
+                <div>
+                    <label>Hora</label>
+                    <select>
+                        <option value="female">Feminino</option>
+                        <option value="male">Masculino</option>
+                        <option value="na">Prefiro não responder</option>
+                    </select>
+                    <img src="./assets/icon/clock.svg">
+                </div>
+            </div>
+
+            <div class="button">
+                <button type="submit">agendar</button>
+            </div>
+        </form>
+
+    </aside>
+    
+    <button id="schedule" class="schedule display" type="submit">novo agendamento</button>
 </body>
 </html>
