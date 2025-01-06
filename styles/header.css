@@ -30,6 +30,7 @@ header .date img {
 header input[type="date"] {
    width: 172px;
    padding-left: 35px;
+   appearance: none;
 
     &::-webkit-calendar-picker-indicator {
      margin-right: 4px;
