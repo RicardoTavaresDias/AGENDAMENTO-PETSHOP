@@ -91,6 +91,11 @@ section .containerHours .close a {
   text-decoration: none;
   font: var(--paragraph-small);
   color: var(--content-tertiary);
+
+  &:hover {
+    color: var(--content-primary);
+    text-decoration: underline;
+  }
 }
 
 

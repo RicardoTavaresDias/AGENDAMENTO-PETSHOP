@@ -32,10 +32,19 @@ input, textarea, select {
   width: 397px;
   height: 48px;
   border-radius: 8px;
-  border: 1.5px solid var(--content-secondary);
+  outline: 1px solid var(--content-tertiary);
+  border: none;
   color: var(--content-secondary);
   background-color: var(--border-primary);
   margin-top: 4px;
+
+  &:hover {
+    outline: 2px solid var(--border-secondary);
+  }
+
+  &:active {
+    outline: 1px solid var(--border-brand);
+  }
 }
 
 textarea { 
