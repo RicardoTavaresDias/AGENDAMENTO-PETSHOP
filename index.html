@@ -306,6 +306,8 @@
             button.classList.remove("display")
             aside.classList.add("display")
         }
+
+        //AQUI VAI SER NO JAVASCRIPT
         let day = new Date().getDate()
         let month = new Date().getMonth() + 1
         const year = new Date().getFullYear()
@@ -313,6 +315,11 @@
         month = String(month).length === 1 ? "0" + month : month = month
         document.getElementById("date").value = `${year}-${month}-${day}`
         document.getElementById("dateForm").value = `${year}-${month}-${day}`
+
+        document.getElementById("hour").addEventListener("change", () => {
+            console.log(document.getElementById("hour").value)
+        })
+        //\AQUI VAI SER NO JAVASCRIPT
     </script>
     
 </body>
