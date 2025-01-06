@@ -13,7 +13,7 @@ header h1 {
 header p {
   font: var(--paragraph-medium);
   color: var(--content-secondary);
-  margin-top: 15px;
+  margin-top: 5px;
   /* font-size: 20px; */
 }
 
