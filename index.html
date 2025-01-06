@@ -40,7 +40,7 @@
 
             <div class="date">
                 <div>
-                    <input id="date" type="date">
+                    <input type="date" id="date" placeholder="07/05/2024" >
                     <img src="./assets/icon/seta.svg">  
                 </div>
                 
@@ -306,7 +306,13 @@
             button.classList.remove("display")
             aside.classList.add("display")
         }
-       
+        let day = new Date().getDate()
+        let month = new Date().getMonth() + 1
+        const year = new Date().getFullYear()
+        day = String(day).length === 1 ? "0" + day : day = day
+        month = String(month).length === 1 ? "0" + month : month = month
+        document.getElementById("date").value = `${year}-${month}-${day}`
+        document.getElementById("dateForm").value = `${year}-${month}-${day}`
     </script>
     
 </body>
