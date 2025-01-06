@@ -83,6 +83,8 @@ input[type="date"], select{
   background-repeat: no-repeat;
   background-position: 6%;
   font: var(--label-large); 
+  appearance: none;
+  
     &::-webkit-calendar-picker-indicator {
       width: 20px;
       height: 20px;
