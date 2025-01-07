@@ -19,7 +19,6 @@ export function alertExclamation(value) {
   div.append(img, span)
   article.classList.add("exclamationBorder")
   article.append(div, img2)
-  console.log(article)
   aside.append(article)
 
   document.querySelector("#closeInf").addEventListener("click", () => {
@@ -42,7 +41,6 @@ export function alertCheck(value) {
   div.append(img, span)
   article.classList.add("checkBorder")
   article.append(div, img2)
-  console.log(article)
   aside.append(article)
 
   document.querySelector("#closeInf").addEventListener("click", () => {
@@ -66,7 +64,6 @@ export function alertError(value, border) {
   div.append(img, span)
   article.classList.add("errorBorder")
   article.append(div, img2)
-  console.log(article)
   aside.append(article)
 
   document.querySelector("#closeInf").addEventListener("click", () => {
@@ -87,7 +84,7 @@ function closeInfo() {
 //PARA USO DA EXPORT, NO ALERT...
 //alertExclamation("ERROR test")
 //alertCheck("ERROR test")
-alertError("ERROR test")
+//alertError("ERROR test")
 
 
  

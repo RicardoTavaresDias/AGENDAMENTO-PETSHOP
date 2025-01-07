@@ -3,7 +3,7 @@ import dayjs from "dayjs"
 const main = document.querySelector("main")
 const aside = document.querySelector("aside")
 const form = document.querySelector("form")
-const button = document.querySelector("#newSchedule")
+const button = document.getElementById("newSchedule")
 
 const datePage = document.getElementById("date")
 const dateForm = document.getElementById("dateForm")
@@ -22,12 +22,12 @@ button.addEventListener("click", () => {
   })
 })
 
-// export function asideClose() {
-//   main.classList.remove("screen")
-//   button.classList.remove("display")
-//   aside.classList.add("display")
-//   cosole.log("eu")
-// }
+document.getElementById("schedule").addEventListener("click", (evento) => {
+  evento.preventDefault()
+  main.classList.remove("screen")
+  button.classList.remove("display")
+  aside.classList.add("display")
+})
 
 
 export { form, aside, main, button }
