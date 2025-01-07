@@ -1,0 +1,113 @@
+.center{
+  margin: auto;
+  width: 600px;
+}
+
+.loading {
+  margin: auto;
+  width: 250px;
+}
+
+article {
+  height: 68px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+article img {
+  width: 32px;
+  margin-left: 20px;
+}
+
+article img:nth-child(2) {
+  width: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+article span {
+  font: var(--label-large);
+  font-size: 20px;
+}
+
+.exclamationSpan {
+  color: #fff;
+}
+
+.exclamationBorder {
+  outline: 2px solid #e2e2e28e;
+}
+
+.checkSpan {
+  color: #fff;
+}
+
+.checkBorder {
+  outline: 2px solid #00967dbf;
+}
+
+.errorSpan {
+  color: #fff;
+}
+
+.errorBorder {
+  outline: 2px solid #ff65427a;
+}
+
+
+article div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+figure div {
+    width: 16px;
+    height: 16px;
+    background-color: #ffff;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    opacity: 0.2;   
+}
+
+figure div:nth-child(1){
+  animation: anime 0.6s 0ms infinite linear;
+}
+
+figure div:nth-child(2){
+  animation: anime 0.6s 100ms infinite linear;
+}
+
+figure div:nth-child(3){
+  animation: anime 0.6s 200ms infinite linear;
+}
+
+
+@keyframes anime {
+  0% {
+    opacity: 0.2;
+    transform: translateY(0px);
+  } 50% {
+    opacity: 0.6;
+    transform: translateY(-9px);
+  } 100%  {
+    opacity: 0.2;
+    transform: translateY(0px);
+  }
+}
+
+
+/* 0.274 */
+/* #00000046 - preto*/
+/* #00967d66 - verde */
+/* #ff65427a - vermelho */

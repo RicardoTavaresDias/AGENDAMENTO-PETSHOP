@@ -224,13 +224,14 @@
 
     </main>
 
-    <aside class="display">
+    <aside class="display"> 
+
         <div class="header">
             <h2>Agende um atendimento</h2>
             <p>Preencha os dados do cliente para realizar o agendamento:</p>
         </div>
 
-        <form>
+        <form> 
 
             <div>
                 <label>Nome do tutor</label>
@@ -320,6 +321,111 @@
             console.log(document.getElementById("hour").value)
         })
         //\AQUI VAI SER NO JAVASCRIPT
+
+        /*
+        // LOADING
+        const form = document.querySelector("form")
+        aside.classList.remove("display")
+        form.classList.add("display")
+        document.querySelector("aside div").classList.add("display")
+        aside.classList.add("loading")
+        aside.innerHTML = 
+                        ` 
+                        <figure>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </figure>
+                        `
+
+        button.classList.add("display")
+        main.classList.add("screen")
+        */
+        
+    
+
+        /*
+        //ALERT EXCLAMATION
+        const form = document.querySelector("form")
+        button.classList.add("display")
+        main.classList.add("screen")
+        aside.classList.remove("display")
+        form.classList.add("display")
+        document.querySelector("aside div").classList.add("display")
+        aside.classList.add("center")
+
+        aside.innerHTML = 
+        `
+        <article class="exclamationBorder">
+            <div>
+                <img src="./assets/icon/circle-exclamation.svg">
+                <span class="exclamationSpan">ipsis litterisipsis litterisipsis litteris</span>
+            </div>
+            <img onclick="closeInf()" src="./assets/icon/close.svg">
+        </article>
+        `
+        */
+
+
+        
+        /*
+        //ALERT CHECK
+        const form = document.querySelector("form")
+        button.classList.add("display")
+        main.classList.add("screen")
+        aside.classList.remove("display")
+        form.classList.add("display")
+        document.querySelector("aside div").classList.add("display")
+        aside.classList.add("center")
+
+        aside.innerHTML = 
+        `
+        <article class="checkBorder">
+            <div>
+                <img src="./assets/icon/check.svg">
+                <span class="checkSpan">ipsis litterisipsis litterisipsis litteris</span>
+            </div>
+            <img onclick="closeInf()" src="./assets/icon/close.svg">
+        </article>
+        `
+        */
+
+
+        /*
+        //ALERT ERROR
+        const form = document.querySelector("form")
+        button.classList.add("display")
+        main.classList.add("screen")
+        aside.classList.remove("display")
+        form.classList.add("display")
+        document.querySelector("aside div").classList.add("display")
+        aside.classList.add("center")
+
+        aside.innerHTML = 
+        `
+        <article class="errorBorder">
+            <div>
+                <img src="./assets/icon/error.svg">
+                <span class="errorSpan">ipsis litterisipsis litterisipsis litteris</span>
+            </div>
+            <img onclick="closeInf()" src="./assets/icon/close.svg">
+        </article>
+        `
+        */
+
+
+        /*
+        // FECHAR INFO
+        function closeInf() {
+            aside.innerHTML = ""
+            button.classList.remove("display")
+            main.classList.remove("screen")
+            aside.classList.add("display")
+            form.classList.remove("display")
+            document.querySelector("aside div").classList.remove("display")
+            aside.classList.remove("center")
+        }
+        */
     </script>
     
 </body>
