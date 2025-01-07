@@ -1,0 +1,22 @@
+{
+  "name": "Agendamento de Petshop",
+  "description": "O projeto é um site web responsivo  de agendamento de pet shop com a possibilidade de agendar clientes e remover o agendamento.Esse é um dos desafios práticos da formação de Full-Stack, um dos conteúdos disponíveis para alunos da Rocketseat.",
+  "author": "Ricardo Tavares",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve",
+    "server": "json-server --watch server.json --port 3333"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  }
+}
