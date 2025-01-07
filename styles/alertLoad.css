@@ -30,32 +30,20 @@ article img:nth-child(2) {
 article span {
   font: var(--label-large);
   font-size: 20px;
-}
-
-.exclamationSpan {
-  color: #fff;
+  color: var(--content-primary);
 }
 
 .exclamationBorder {
   outline: 2px solid #e2e2e28e;
 }
 
-.checkSpan {
-  color: #fff;
-}
-
 .checkBorder {
   outline: 2px solid #00967dbf;
-}
-
-.errorSpan {
-  color: #fff;
 }
 
 .errorBorder {
   outline: 2px solid #ff65427a;
 }
-
 
 article div {
   display: flex;
@@ -73,7 +61,7 @@ figure {
 figure div {
     width: 16px;
     height: 16px;
-    background-color: #ffff;
+    background-color: var(--content-primary);
     border-radius: 50%;
     border: none;
     outline: none;
@@ -105,9 +93,3 @@ figure div:nth-child(3){
     transform: translateY(0px);
   }
 }
-
-
-/* 0.274 */
-/* #00000046 - preto*/
-/* #00967d66 - verde */
-/* #ff65427a - vermelho */
