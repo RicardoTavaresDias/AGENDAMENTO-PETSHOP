@@ -22,11 +22,12 @@ button.addEventListener("click", () => {
   })
 })
 
-export function asideClose() {
-  main.classList.remove("screen")
-  button.classList.remove("display")
-  aside.classList.add("display")
-}
+// export function asideClose() {
+//   main.classList.remove("screen")
+//   button.classList.remove("display")
+//   aside.classList.add("display")
+//   cosole.log("eu")
+// }
 
 
 export { form, aside, main, button }

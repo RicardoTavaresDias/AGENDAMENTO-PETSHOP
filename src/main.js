@@ -10,7 +10,13 @@ import "./styles/aside.css"
 import "./styles/alertLoad.css"
 
 // DAYJS
-import "./libs/dayjs"
+import "./libs/dayjs.js"
+
+// JS
+import "./modules/load.js"
+import "./modules/loading.js"
+import "./modules/alert.js"
+
 
 
 // import dayjs from "dayjs"

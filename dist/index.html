@@ -226,7 +226,7 @@
 
     <aside class="display"> 
 
-        <div class="header">
+        <div id="header" class="header">
             <h2>Agende um atendimento</h2>
             <p>Preencha os dados do cliente para realizar o agendamento:</p>
         </div>
@@ -290,46 +290,17 @@
     <button id="newSchedule" class="schedule" type="submit">novo agendamento</button>
 
     <script>
-        const main = document.querySelector("main")
-        const aside = document.querySelector("aside")
-        const button = document.querySelector("#newSchedule")
-        button.addEventListener("click", () => {
-            main.classList.add("screen")
-            button.classList.add("display")
-            aside.classList.remove("display")
-            window.scrollTo({
-                top: 0,
-                behavior: 'auto'
-            })
-        })
-        function asideClose() {
-            main.classList.remove("screen")
-            button.classList.remove("display")
-            aside.classList.add("display")
-        }
-
-        //AQUI VAI SER NO JAVASCRIPT
-        let day = new Date().getDate()
-        let month = new Date().getMonth() + 1
-        const year = new Date().getFullYear()
-        day = String(day).length === 1 ? "0" + day : day = day
-        month = String(month).length === 1 ? "0" + month : month = month
-        document.getElementById("date").value = `${year}-${month}-${day}`
-        document.getElementById("dateForm").value = `${year}-${month}-${day}`
-
-        document.getElementById("hour").addEventListener("change", () => {
-            console.log(document.getElementById("hour").value)
-        })
-        //\AQUI VAI SER NO JAVASCRIPT
-
+       
         /*
         // LOADING
-        const form = document.querySelector("form")
-        aside.classList.remove("display")
-        form.classList.add("display")
-        document.querySelector("aside div").classList.add("display")
-        aside.classList.add("loading")
-        aside.innerHTML = 
+        //#const form = document.querySelector("form")
+
+        //#aside.classList.remove("display")
+        //#form.classList.add("display")
+        //#document.querySelector("aside div").classList.add("display")
+
+        *aside.classList.add("loading")
+        *aside.innerHTML = 
                         ` 
                         <figure>
                             <div></div>
@@ -338,8 +309,8 @@
                         </figure>
                         `
 
-        button.classList.add("display")
-        main.classList.add("screen")
+        //#button.classList.add("display")
+       // #main.classList.add("screen")
         */
         
     
@@ -393,13 +364,15 @@
 
         /*
         //ALERT ERROR
-        const form = document.querySelector("form")
-        button.classList.add("display")
-        main.classList.add("screen")
-        aside.classList.remove("display")
-        form.classList.add("display")
-        document.querySelector("aside div").classList.add("display")
-        aside.classList.add("center")
+        //const form = document.querySelector("form")
+       // button.classList.add("display")
+        //main.classList.add("screen")
+        //aside.classList.remove("display")
+
+        //form.classList.add("display")
+        //document.querySelector("aside div").classList.add("display")
+
+        *aside.classList.add("center")
 
         aside.innerHTML = 
         `
