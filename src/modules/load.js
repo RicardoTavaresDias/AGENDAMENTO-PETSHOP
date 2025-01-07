@@ -11,6 +11,7 @@ const dateForm = document.getElementById("dateForm")
 const datehoje = dayjs().format("YYYY-MM-DD")
 datePage.value = datehoje
 dateForm.value = datehoje
+dateForm.setAttribute("min", datehoje)
 
 button.addEventListener("click", () => {
   main.classList.add("screen")
