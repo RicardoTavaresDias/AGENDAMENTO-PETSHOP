@@ -63,7 +63,7 @@ input[type="text"]  {
   background-position: 3%;
 }
 
-#namePet {
+#namepet {
   background: url(../assets/icon/paw.svg);
   background-repeat: no-repeat;
   background-position: 3%;
@@ -95,6 +95,13 @@ input[type="date"], select{
       right: 0;
       z-index: 1;
     }
+}
+
+aside span {
+  display: flex;
+  justify-content: start;
+  margin: 15px;
+  font: var(--paragraph-small);
 }
 
 select {

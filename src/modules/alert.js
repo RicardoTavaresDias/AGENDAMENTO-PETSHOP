@@ -1,90 +1,66 @@
-import { aside} from "./load.js"
-import  { pages, closePages }  from "./loading.js"
+import { aside, button, main } from "./load.js"
 
-const article = document.createElement("article")
-const div = document.createElement("div")
-const img = document.createElement("img")
-const img2 = document.createElement("img")
-const span = document.createElement("span")
+const span = document.querySelector(".mensage")
+const imgAlert = document.querySelector("article div img")
+const div = document.querySelector(".alertcenter")
+const article = document.querySelector("article")
+const alert = document.querySelector(".alertcenter")
+const buttonSchedule = document.querySelector("#schedule")
 
 export function alertExclamation(value) {
-  pages()
-  aside.classList.add("center")
-
-  img.setAttribute("src", "./src/assets/icon/circle-exclamation.svg")
-  img2.setAttribute("src", "./src/assets/icon/close.svg")
-  img2.id = "closeInf"
-  span.textContent = value
-  
-  div.append(img, span)
+  div.classList.remove("display")
   article.classList.add("exclamationBorder")
-  article.append(div, img2)
-  aside.append(article)
-
-  document.querySelector("#closeInf").addEventListener("click", () => {
-    closeInfo()
-    closePages()
-    article.remove()
-  })
+  imgAlert.setAttribute("src", "./src/assets/icon/circle-exclamation.svg")
+  span.textContent = value
+  screenBottom()
 }
-
 
 export function alertCheck(value) {
-  pages()
-  aside.classList.add("center")
-
-  img.setAttribute("src", "./src/assets/icon/check.svg")
-  img2.setAttribute("src", "./src/assets/icon/close.svg")
-  img2.id = "closeInf"
-  span.textContent = value
-  
-  div.append(img, span)
+  div.classList.remove("display")
   article.classList.add("checkBorder")
-  article.append(div, img2)
-  aside.append(article)
-
-  document.querySelector("#closeInf").addEventListener("click", () => {
-    closeInfo()
-    closePages()
-    article.remove()
-  })
-}
-
-
-
-export function alertError(value, border) {
-  pages()
-  aside.classList.add("center")
-
-  img.setAttribute("src", "./src/assets/icon/error.svg")
-  img2.setAttribute("src", "./src/assets/icon/close.svg")
-  img2.id = "closeInf"
+  imgAlert.setAttribute("src", "./src/assets/icon/check.svg")
   span.textContent = value
-  
-  div.append(img, span)
+  screenBottom()
+}
+
+export function alertError(value) {
+  div.classList.remove("display")
   article.classList.add("errorBorder")
-  article.append(div, img2)
-  aside.append(article)
+  imgAlert.setAttribute("src", "./src/assets/icon/error.svg")
+  span.textContent = value
+  screenBottom()
+}
 
-  document.querySelector("#closeInf").addEventListener("click", () => {
-    closeInfo()
-    closePages()
-    article.remove()
-  })
+//FUNDO DO CONTEUDO
+function screenBottom() {
+  button.classList.add("display")
+  main.classList.add("screen")
+  aside.classList.add("screen")
+
+  buttonSchedule.disabled = true
 }
 
 
-function closeInfo() {
-  document.querySelector("aside div").classList.remove("display")
-  aside.classList.remove("center")
-}
+// FECHA O ALERT
+document.querySelector("#closeInf").addEventListener("click", () => {
+  alert.classList.add("display")
+  article.classList.remove("errorBorder")
+  article.classList.remove("checkBorder")
+  article.classList.remove("exclamationBorder")
 
+  button.classList.remove("display")
+  main.classList.remove("screen")
+  aside.classList.remove("screen") 
+  buttonSchedule.disabled = false
+})
 
-
+setTimeout(function(){
 //PARA USO DA EXPORT, NO ALERT...
 //alertExclamation("ERROR test")
-//alertCheck("ERROR test")
+alertCheck("ERROR test")
 //alertError("ERROR test")
+}, 3000)
+
 
 
  

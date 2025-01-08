@@ -16,6 +16,7 @@ import "./libs/dayjs.js"
 //import "./modules/load.js"
 import "./modules/loading.js"
 import "./modules/alert.js"
+import "./modules/validField.js"
 
 
 

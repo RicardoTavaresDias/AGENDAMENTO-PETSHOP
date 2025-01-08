@@ -58,5 +58,5 @@ export function closePages() {
 //   loadingServe()
 //   setTimeout(function() {
 //     closeLoadingServe()
-//   }, 4000);
-// }, 4000);
+//   }, 3000);
+// }, 3000);
