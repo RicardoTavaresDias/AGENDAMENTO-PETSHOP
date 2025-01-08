@@ -54,12 +54,12 @@ document.querySelector("#closeInf").addEventListener("click", () => {
   buttonSchedule.disabled = false
 })
 
-setTimeout(function(){
-//PARA USO DA EXPORT, NO ALERT...
-//alertExclamation("ERROR test")
-alertCheck("ERROR test")
-//alertError("ERROR test")
-}, 3000)
+// setTimeout(function(){
+// //PARA USO DA EXPORT, NO ALERT...
+// //alertExclamation("ERROR test")
+// //alertCheck("ERROR test")
+// //alertError("ERROR test")
+// }, 3000)
 
 
 

@@ -33,7 +33,9 @@ document.querySelector("#phone").addEventListener("blur", () => {
   document.querySelector("#phone").value = "(" + phone.slice(0,2) + ")" + phone.slice(2,7) + "-" + phone.slice(7,11)
   }else if (String(phone).length === 10){
     document.querySelector("#phone").value = "(" + phone.slice(0,2) + ")" + phone.slice(2,6) + "-" + phone.slice(6,10)
-  } else {
+  } else if (String(phone).length === 14 || String(phone).length === 13) {
+    return false
+  }else {
     error("menPhone", "* Número de telefone incompleto!")
   }
 }) 
