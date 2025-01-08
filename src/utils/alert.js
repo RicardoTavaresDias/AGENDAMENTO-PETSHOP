@@ -12,7 +12,7 @@ export function alertExclamation(value) {
   article.classList.add("exclamationBorder")
   imgAlert.setAttribute("src", "./src/assets/icon/circle-exclamation.svg")
   span.textContent = value
-  screenBottom()
+  backgroundScreen()
 }
 
 export function alertCheck(value) {
@@ -20,7 +20,7 @@ export function alertCheck(value) {
   article.classList.add("checkBorder")
   imgAlert.setAttribute("src", "./src/assets/icon/check.svg")
   span.textContent = value
-  screenBottom()
+  backgroundScreen()
 }
 
 export function alertError(value) {
@@ -28,11 +28,11 @@ export function alertError(value) {
   article.classList.add("errorBorder")
   imgAlert.setAttribute("src", "./src/assets/icon/error.svg")
   span.textContent = value
-  screenBottom()
+  backgroundScreen()
 }
 
 //FUNDO DO CONTEUDO
-function screenBottom() {
+function backgroundScreen() {
   button.classList.add("display")
   main.classList.add("screen")
   aside.classList.add("screen")

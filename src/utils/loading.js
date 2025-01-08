@@ -14,7 +14,6 @@ export function loadingServe() {
   figure.append(div, div2, div3)
   aside.append(figure)
   console.log(aside)
-
 }
 
 

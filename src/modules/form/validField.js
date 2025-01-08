@@ -67,6 +67,7 @@ function error(value, mensage) {
   document.querySelector("#" + value.slice(3, 10).toLowerCase()).style.outlineColor = "red"
 }
 
+//VOLTA ESTADO INICIAL DA ESTILIZAÇÃO
 function start(value) {
   document.querySelector("." + value).textContent = ""
   document.querySelector("." + value).style.color = ""
