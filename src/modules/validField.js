@@ -1,5 +1,3 @@
-import { alertError } from "./alert.js"
-
 const name = document.getElementById("name")
 const namePet = document.getElementById("namePet")
 const phone = document.getElementById("phone")

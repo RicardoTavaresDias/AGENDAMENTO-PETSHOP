@@ -13,7 +13,7 @@ import "./styles/alertLoad.css"
 import "./libs/dayjs.js"
 
 // JS
-//import "./modules/load.js"
+import "./modules/load.js"
 import "./modules/loading.js"
 import "./modules/alert.js"
 import "./modules/validField.js"
