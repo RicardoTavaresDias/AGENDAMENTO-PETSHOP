@@ -1,4 +1,4 @@
-import { form, aside, main, button } from "./load.js"
+import { form, aside, main, button } from "../modules/load.js"
 
 const figure = document.createElement("figure")
 const div = document.createElement("div")
@@ -16,15 +16,12 @@ export function loadingServe() {
   console.log(aside)
 }
 
-
 //CLOSE ANIMAÇÃO CARREGAMENTO
 export function closeLoadingServe() {
   figure.remove()
   aside.classList.remove("loading")
   closePages()
 }
-
-
 
 //ADICIONA NOVA PAGINA
 export function pages() {
@@ -34,7 +31,6 @@ export function pages() {
   button.classList.add("display")
   main.classList.add("screen")
 }
-
 
 //VALTAR A PAGINA INICIAL
 export function closePages() {

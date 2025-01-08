@@ -1,4 +1,4 @@
-import { aside, button, main } from "./load.js"
+import { aside, button, main } from "../modules/load.js"
 
 const span = document.querySelector(".mensage")
 const imgAlert = document.querySelector("article div img")
@@ -56,9 +56,9 @@ document.querySelector("#closeInf").addEventListener("click", () => {
 
 // setTimeout(function(){
 // //PARA USO DA EXPORT, NO ALERT...
-// //alertExclamation("ERROR test")
-// //alertCheck("ERROR test")
-// //alertError("ERROR test")
+// //alertExclamation("ipsis litterisipsis litterisipsis litteris")
+// //alertCheck("ipsis litterisipsis litterisipsis litteris")
+// //alertError("ipsis litterisipsis litterisipsis litteris")
 // }, 3000)
 
 
