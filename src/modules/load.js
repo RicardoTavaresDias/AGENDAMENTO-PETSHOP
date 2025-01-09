@@ -1,10 +1,8 @@
 import dayjs from "dayjs"
 
+const button = document.getElementById("newSchedule")
 const main = document.querySelector("main")
 const aside = document.querySelector("aside")
-const form = document.querySelector("form")
-const button = document.getElementById("newSchedule")
-
 const datePage = document.getElementById("date")
 const dateForm = document.getElementById("dateForm")
 
@@ -23,13 +21,11 @@ button.addEventListener("click", () => {
   })
 })
 
-document.getElementById("schedule").addEventListener("click", (evento) => {
-  evento.preventDefault()
-  main.classList.remove("screen")
-  button.classList.remove("display")
-  aside.classList.add("display")
-})
+// document.getElementById("schedule").addEventListener("click", (evento) => {
+//   evento.preventDefault()
+  
+// })
 
 
-export { form, aside, main, button }
+export { aside, main, button }
 

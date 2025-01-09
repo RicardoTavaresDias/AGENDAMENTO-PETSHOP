@@ -1,4 +1,4 @@
-import { form, aside, main, button } from "../modules/load.js"
+//import { form, aside, main, button } from "../modules/load.js"
 
 const figure = document.createElement("figure")
 const div = document.createElement("div")

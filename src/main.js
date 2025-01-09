@@ -17,6 +17,10 @@ import "./modules/load.js"
 import "./utils/loading.js"
 import "./utils/alert.js"
 import "./modules/form/validField.js"
+import "./modules/form/submit.js"
+
+//SERVER 
+import "./server/api_config.js"
 
 
 

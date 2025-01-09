@@ -1,12 +1,3 @@
-const name = document.getElementById("name")
-const namePet = document.getElementById("namePet")
-const phone = document.getElementById("phone")
-const service = document.getElementById("service")
-const dateForm = document.getElementById("dateForm")
-const hour = document.getElementById("hour")
-const buttonSchedule = document.getElementById("schedule")
-const form = document.querySelector("form")
-
 const regex = /[0-9!@#$%¨&*(){}[?/;:.,\]|'"´`=-]/
 const regexNumber = /\D/g
 
@@ -15,7 +6,7 @@ document.querySelector("#name").addEventListener("keyup", () => {
 }) 
  
 document.querySelector("#namepet").addEventListener("keyup", () => {
-  validCaracteres("menNamePet", "* Este campo só aceita letras!!")
+  validCaracteres("menNamepet", "* Este campo só aceita letras!!")
 }) 
 
 document.querySelector("#phone").addEventListener("keyup", () => {
@@ -72,4 +63,13 @@ function start(value) {
   document.querySelector("." + value).textContent = ""
   document.querySelector("." + value).style.color = ""
   document.querySelector("#" + value.slice(3, 10).toLowerCase()).style.outlineColor = ""
+}
+
+//VALIDAR O CAMPO VAZIO
+export function value(value) {
+  if (value.value === "") {  
+    error(`men${value.id.charAt(0).toUpperCase() + value.id.slice(1)}`, `* Favor preencher o campo obrigatorio!`)
+  } else {
+    return true
+  }
 }

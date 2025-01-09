@@ -1,4 +1,4 @@
-import { aside, button, main } from "../modules/load.js"
+//import { aside, button, main } from "../modules/load.js"
 
 const span = document.querySelector(".mensage")
 const imgAlert = document.querySelector("article div img")
