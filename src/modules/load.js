@@ -1,4 +1,5 @@
 import dayjs from "dayjs"
+import { get } from "../server/get.js"
 
 const button = document.getElementById("newSchedule")
 const main = document.querySelector("main")
@@ -10,6 +11,7 @@ const datehoje = dayjs().format("YYYY-MM-DD")
 datePage.value = datehoje
 dateForm.value = datehoje
 dateForm.setAttribute("min", datehoje)
+datePage.setAttribute("min", datehoje)
 
 button.addEventListener("click", () => {
   main.classList.add("screen")
@@ -23,7 +25,7 @@ button.addEventListener("click", () => {
 
 //CARREGAMENTO DA PAGINA.
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("OLA ESTOU CARREGADO!")
+  get(datePage.value)
 })
 
 

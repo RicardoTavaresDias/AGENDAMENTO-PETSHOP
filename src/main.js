@@ -18,10 +18,12 @@ import "./utils/loading.js"
 import "./utils/alert.js"
 import "./modules/form/validField.js"
 import "./modules/form/submit.js"
+import "./modules/form/scheduling.js"
 
 //SERVER 
 import "./server/api_config.js"
 import "./server/post.js"
+import "./server/get.js"
 
 
 
