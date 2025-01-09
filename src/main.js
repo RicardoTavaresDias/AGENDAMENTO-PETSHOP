@@ -21,6 +21,7 @@ import "./modules/form/submit.js"
 
 //SERVER 
 import "./server/api_config.js"
+import "./server/post.js"
 
 
 

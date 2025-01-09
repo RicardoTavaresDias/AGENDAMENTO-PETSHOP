@@ -58,7 +58,7 @@ main {
     position: relative;
 }
 
-.screen {
+.screen, .screenn {
     filter: blur(3px);
 }
 

@@ -1,4 +1,4 @@
-import { port } from "../../server/api_config"
+import { post } from "../../server/post.js"
 import { aside, button, main } from "../load.js"
 import { value } from "./validField.js"
 
@@ -17,8 +17,20 @@ form.addEventListener("submit", (even) => {
   try {
     if (value(name) && value(namePet) && value(phone) && value(service)) {
       if (String(phone.value).length === 13 || String(phone.value).length === 14) {
-        // CODAR GRAVAR NA API
-        console.log("ENVIADO!")
+          
+         post({
+          name: name.value, 
+          pet : namePet.value,
+          phone: phone.value,
+          service: service.value,
+          date: dateForm.value,
+          hour: hour.value
+        })
+
+        name.value = ""
+        namePet.value = ""
+        phone.value = ""
+
       }
         main.classList.remove("screen")
         button.classList.remove("display")
@@ -30,5 +42,5 @@ form.addEventListener("submit", (even) => {
   }
 })
 
-export { main, aside, button }
+export { main, aside, button, form }
 

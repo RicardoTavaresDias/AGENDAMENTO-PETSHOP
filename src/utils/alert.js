@@ -1,4 +1,4 @@
-//import { aside, button, main } from "../modules/load.js"
+import { aside, button, main } from "../modules/load.js"
 
 const span = document.querySelector(".mensage")
 const imgAlert = document.querySelector("article div img")
@@ -13,6 +13,10 @@ export function alertExclamation(value) {
   imgAlert.setAttribute("src", "./src/assets/icon/circle-exclamation.svg")
   span.textContent = value
   backgroundScreen()
+  window.scrollTo({
+    top: 0,
+    behavior: 'auto'
+  })
 }
 
 export function alertCheck(value) {
@@ -21,6 +25,10 @@ export function alertCheck(value) {
   imgAlert.setAttribute("src", "./src/assets/icon/check.svg")
   span.textContent = value
   backgroundScreen()
+  window.scrollTo({
+    top: 0,
+    behavior: 'auto'
+  })
 }
 
 export function alertError(value) {
@@ -29,6 +37,10 @@ export function alertError(value) {
   imgAlert.setAttribute("src", "./src/assets/icon/error.svg")
   span.textContent = value
   backgroundScreen()
+  window.scrollTo({
+    top: 0,
+    behavior: 'auto'
+  })
 }
 
 //FUNDO DO CONTEUDO
@@ -53,6 +65,11 @@ document.querySelector("#closeInf").addEventListener("click", () => {
   aside.classList.remove("screen") 
   buttonSchedule.disabled = false
 })
+
+
+
+
+//TESTES
 
 // setTimeout(function(){
 // //PARA USO DA EXPORT, NO ALERT...

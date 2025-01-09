@@ -21,10 +21,10 @@ button.addEventListener("click", () => {
   })
 })
 
-// document.getElementById("schedule").addEventListener("click", (evento) => {
-//   evento.preventDefault()
-  
-// })
+//CARREGAMENTO DA PAGINA.
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("OLA ESTOU CARREGADO!")
+})
 
 
 export { aside, main, button }
