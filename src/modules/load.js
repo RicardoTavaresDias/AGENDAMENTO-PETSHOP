@@ -16,6 +16,7 @@ dateForm.value = datehoje
 dateForm.setAttribute("min", datehoje)
 datePage.setAttribute("min", datehoje)
 
+// EVENTO PARA ABRIR O FORMULARIO
 button.addEventListener("click", () => {
   main.classList.add("screen")
   button.classList.add("display")
@@ -26,35 +27,35 @@ button.addEventListener("click", () => {
   })
 })
 
+// EVENTO VALIDAÇÃO DA DATA ATUAL E HORARIO NO INPUT SELECT
 export async function update(value) {
   datehour.innerHTML = ""
   const element = await get(value)
   const array = []
   let arrayhour = hoursDate.slice()
   
-  element.forEach(event => {
-    if (event.date === datePage.value) {
-      array.push(event.hour)
-    }
-  });
+  // element.forEach(event => {
+  //   if (event.date === datePage.value) {
+  //     array.push(event.hour)
+  //   }
+  // });
 
-  //PAREI AQUI
-  array.forEach(element => {
-    arrayhour = arrayhour.filter(num => num !== element)
-    arrayhour = arrayhour.filter(min => min > dayjs().format("HH:mm"))
-    console.log(arrayhour)
-  })
+  // //PAREI AQUI
+  // array.forEach(element => {
+  //   arrayhour = arrayhour.filter(num => num !== element)
+  //   arrayhour = arrayhour.filter(min => min > dayjs().format("HH:mm"))
+  // })
 
-  console.log(arrayhour)
-  for (let i = 0; arrayhour.length > i; i++){
+  console.log(hoursDate)
+  for (let i = 0; hoursDate.length > i; i++){
       const option = document.createElement("option")
-      option.value = arrayhour[i]
-      option.textContent = arrayhour[i]
+      option.value = hoursDate[i]
+      option.textContent = hoursDate[i]
       datehour.prepend(option)      
   }
 }
 
-
+// CARREGAMENTO DA PAGINA, ATUALIZA
 export function toLoad(){
   const removeDOM = document.querySelectorAll(".containerHours")
   removeDOM.forEach(element => element.remove())
