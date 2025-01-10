@@ -14,16 +14,6 @@ export async function get(value) {
   }
 }
 
-const teste = await get(document.querySelector("#date").value)
-
-
-
-
-
-//const tes = teste.filter(ola => ola.name)
-
-//console.log(tes)
-
 
 
 
