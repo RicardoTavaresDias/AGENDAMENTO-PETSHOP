@@ -38,10 +38,14 @@ export async function update(value) {
     }
   });
 
+  //PAREI AQUI
   array.forEach(element => {
     arrayhour = arrayhour.filter(num => num !== element)
+    arrayhour = arrayhour.filter(min => min > dayjs().format("HH:mm"))
+    console.log(arrayhour)
   })
 
+  console.log(arrayhour)
   for (let i = 0; arrayhour.length > i; i++){
       const option = document.createElement("option")
       option.value = arrayhour[i]
