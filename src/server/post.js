@@ -1,6 +1,7 @@
 import { port } from "./api_config.js"
 import { loadingServe, closeLoadingServe } from "../utils/loading.js"
 import { alertError, alertCheck } from "../utils/alert.js"
+import { toLoad } from "../modules/load.js"
 
  export async function post(value) {
   try {
@@ -24,6 +25,7 @@ import { alertError, alertCheck } from "../utils/alert.js"
     })
     await setTimeout(function () {
       closeLoadingServe()
+      toLoad()
       alertCheck(`${value.name} e ${value.pet}, Cadastrado com sucesso!`)
     }, 500)
   } catch (error) {

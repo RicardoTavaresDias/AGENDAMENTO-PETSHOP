@@ -19,11 +19,13 @@ import "./utils/alert.js"
 import "./modules/form/validField.js"
 import "./modules/form/submit.js"
 import "./modules/form/scheduling.js"
+import "./modules/form/removeScheduling.js"
 
 //SERVER 
 import "./server/api_config.js"
 import "./server/post.js"
 import "./server/get.js"
+import "./server/delete.js"
 
 
 

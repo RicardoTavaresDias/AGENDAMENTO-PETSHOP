@@ -10,7 +10,7 @@ const datePage = document.getElementById("date")
 const dateForm = document.getElementById("dateForm")
 const datehour = document.getElementById("hour")
 
-const datehoje = dayjs().format("YYYY-MM-DD")
+export const datehoje = dayjs().format("YYYY-MM-DD")
 datePage.value = datehoje
 dateForm.value = datehoje
 dateForm.setAttribute("min", datehoje)
@@ -38,21 +38,27 @@ export async function update(value) {
     }
   });
 
-  for (let y = 0; array.length > y; y++){ 
-    for (let i = 0; arrayhour.length > i; i++){
-      if (arrayhour[i] === array[y]){
-        arrayhour.splice(i, 1)
-      }
-    }
-  }
+  array.forEach(element => {
+    arrayhour = arrayhour.filter(num => num !== element)
+  })
 
-  for (let rest = 0; arrayhour.length > rest; rest++){
+  for (let i = 0; arrayhour.length > i; i++){
       const option = document.createElement("option")
-      option.value = arrayhour[rest]
-      option.textContent = arrayhour[rest]
+      option.value = arrayhour[i]
+      option.textContent = arrayhour[i]
       datehour.prepend(option)      
   }
 }
+
+
+export function toLoad(){
+  const removeDOM = document.querySelectorAll(".containerHours")
+  removeDOM.forEach(element => element.remove())
+
+  scheduling(datePage.value)
+  update(datePage.value)
+}
+
 
 scheduling(datePage.value)
 update(datePage)

@@ -30,6 +30,7 @@ form.addEventListener("submit", (even) => {
         name.value = ""
         namePet.value = ""
         phone.value = ""
+        service.value = ""
 
       }
         main.classList.remove("screen")

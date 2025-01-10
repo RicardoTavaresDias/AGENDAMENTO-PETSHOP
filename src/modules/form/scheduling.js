@@ -1,5 +1,7 @@
 import { get } from "../../server/get.js"
 import { update } from "../load.js"
+import { removeUser } from "./removeScheduling.js"
+
 const date = document.getElementById("date")
 
 export async function scheduling(value) {
@@ -81,15 +83,27 @@ function createElement(value, element) {
   // Div close
   divclose.classList.add("close")
   a.setAttribute("href", "#")
+  a.setAttribute("name", hour)
   a.textContent = "Remover agendamento"
 
-  divclose.append(a)
+  divclose.appendChild(a)
 
   divcontainerHours.classList.add("containerHours")
   divcontainerHours.append(divhours, divservice, divclose)
 
   document.querySelector(`.${element}`).append(divcontainerHours)
-}
+
+
+
+      const removeItem = document.querySelectorAll("a")
+      const datePage = document.getElementById("date")
+
+      removeItem.forEach(parent => {
+        parent.addEventListener("click", () => {
+          removeUser(datePage.value, parent.name)
+        })
+      });
+      }
 
 document.getElementById("date").addEventListener("change", () => {
   const removeDOM = document.querySelectorAll(".containerHours")
@@ -98,4 +112,5 @@ document.getElementById("date").addEventListener("change", () => {
   scheduling(date.value)
   update(date.value)
 })
+
 

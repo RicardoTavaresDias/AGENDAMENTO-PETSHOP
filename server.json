@@ -1,67 +1,22 @@
 {
   "schedule": [
     {
-      "id": "1736445975875",
-      "name": "sdf",
-      "namepet": "sdg",
-      "phone": "(34)25345-3453",
-      "service": "fgdf",
-      "date": "2025-01-09",
+      "id": "1736527535540",
+      "name": "dfs",
+      "namepet": "rgtrg",
+      "phone": "(45)3453-4534",
+      "service": "rfgdeg",
+      "date": "2025-01-10",
       "hour": "9:00"
     },
     {
-      "id": "1736447440753",
-      "name": "fgdf",
-      "namepet": "dfgdf",
-      "phone": "(43)53454-5345",
-      "service": "fgfd",
-      "date": "2025-01-09",
-      "hour": "18:00"
-    },
-    {
-      "id": "1736448866334",
-      "name": "dfdty",
-      "namepet": "rtgrfg",
-      "phone": "(45)34543-5353",
-      "service": "dfgdf",
-      "date": "2025-01-14",
-      "hour": "9:00"
-    },
-    {
-      "id": "1736449393991",
-      "name": "ghfg",
-      "namepet": "gfhfg",
-      "phone": "(45)35345-4353",
-      "service": "dgt",
+      "id": "1736527548036",
+      "name": "sfgs",
+      "namepet": "sfgsf",
+      "phone": "(45)34645-6456",
+      "service": "fdgdfg",
       "date": "2025-01-10",
-      "hour": "21:00"
-    },
-    {
-      "id": "1736449440376",
-      "name": "fgdfg",
-      "namepet": "fgdfg",
-      "phone": "(53)24534-5345",
-      "service": "dghdg",
-      "date": "2025-01-11",
-      "hour": "15:00"
-    },
-    {
-      "id": "1736449493904",
-      "name": "dfgfd",
-      "namepet": "dfgfd",
-      "phone": "(54)64564-5645",
-      "service": "dhgh",
-      "date": "2025-01-17",
-      "hour": "12:00"
-    },
-    {
-      "id": "1736449826181",
-      "name": "rete",
-      "namepet": "retr",
-      "phone": "(45)33654-6435",
-      "service": "yhtry",
-      "date": "2025-01-10",
-      "hour": "16:00"
+      "hour": "13:00"
     }
   ]
 }
