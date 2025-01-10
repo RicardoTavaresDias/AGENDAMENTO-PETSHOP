@@ -1,6 +1,7 @@
 import { port } from "./api_config"
 import { alertError } from "../utils/alert.js"
 
+// EVENTO DE CONSULTA DE DADOS NA BASE DE DADOS
 export async function get(value) {
   try {
       const get = await fetch(`${port}`)

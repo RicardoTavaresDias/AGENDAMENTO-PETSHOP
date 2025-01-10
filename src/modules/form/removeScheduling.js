@@ -1,7 +1,7 @@
 import { get } from "../../server/get.js"
 import { del } from "../../server/delete.js"
 
-
+// EVENTO FILTRANDO OS DADOS E REMOÇÃO DO USUARIO NA BASE DE DADOS
 export async function removeUser(date, hour) {
   const result = await get(date)
 

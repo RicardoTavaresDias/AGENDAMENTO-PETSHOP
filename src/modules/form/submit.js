@@ -1,6 +1,7 @@
 import { post } from "../../server/post.js"
 import { aside, button, main } from "../load.js"
 import { value } from "./validField.js"
+import { datehoje } from "../load.js"
 
 const name = document.getElementById("name")
 const namePet = document.getElementById("namepet")
@@ -11,6 +12,7 @@ const hour = document.getElementById("hour")
 const buttonSchedule = document.getElementById("schedule")
 const form = document.querySelector("form")
 
+// EVENTO DE CADASTRO DO USUARIO NA BASE DE DADOS E VALIDADNDO CAMPO OBRIGATORIOS
 form.addEventListener("submit", (even) => {
   even.preventDefault()
   
@@ -31,6 +33,7 @@ form.addEventListener("submit", (even) => {
         namePet.value = ""
         phone.value = ""
         service.value = ""
+        dateForm.value = datehoje
 
       }
         main.classList.remove("screen")

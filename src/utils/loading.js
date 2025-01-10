@@ -23,18 +23,3 @@ export function closeLoadingServe() {
   main.classList.remove("screenn")
   form.classList.remove("screen")
 }
-
-
-//TESTES
-
-//PARA USO DA EXPORT, NO CARREGAMENTO...
-//loadingServe()
-// closeLoadingServe()
-
-
-//  setTimeout(function() {
-//   loadingServe()
-//   setTimeout(function() {
-//     closeLoadingServe()
-//   }, 3000);
-// }, 3000);

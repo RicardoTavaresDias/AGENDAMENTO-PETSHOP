@@ -7,6 +7,7 @@ const article = document.querySelector("article")
 const alert = document.querySelector(".alertcenter")
 const buttonSchedule = document.querySelector("#schedule")
 
+//ALERT EXCLAMAÇÃO
 export function alertExclamation(value) {
   div.classList.remove("display")
   article.classList.add("exclamationBorder")
@@ -19,6 +20,7 @@ export function alertExclamation(value) {
   })
 }
 
+//ALERT CHECK
 export function alertCheck(value) {
   div.classList.remove("display")
   article.classList.add("checkBorder")
@@ -31,6 +33,7 @@ export function alertCheck(value) {
   })
 }
 
+//ALERT ERROR
 export function alertError(value) {
   div.classList.remove("display")
   article.classList.add("errorBorder")
@@ -52,7 +55,6 @@ function backgroundScreen() {
   buttonSchedule.disabled = true
 }
 
-
 // FECHA O ALERT
 document.querySelector("#closeInf").addEventListener("click", () => {
   alert.classList.add("display")
@@ -65,19 +67,5 @@ document.querySelector("#closeInf").addEventListener("click", () => {
   aside.classList.remove("screen") 
   buttonSchedule.disabled = false
 })
-
-
-
-
-//TESTES
-
-// setTimeout(function(){
-// //PARA USO DA EXPORT, NO ALERT...
-// //alertExclamation("ipsis litterisipsis litterisipsis litteris")
-// //alertCheck("ipsis litterisipsis litterisipsis litteris")
-// //alertError("ipsis litterisipsis litterisipsis litteris")
-// }, 3000)
-
-
 
  

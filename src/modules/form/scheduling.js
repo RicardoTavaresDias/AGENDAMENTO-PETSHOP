@@ -4,6 +4,7 @@ import { removeUser } from "./removeScheduling.js"
 
 const date = document.getElementById("date")
 
+// EVENTO PEGAR OS AGENDAMENTO DO BASE DE DADOS DA DATA ATUAL OU DATA DIFERENTE AO MUDAR
 export async function scheduling(value) {
   const products = await get(value)
 
@@ -41,7 +42,7 @@ export async function scheduling(value) {
   });   
 }
 
-
+// EVENTO DE MOSTRAR NA TELA OS AGENDAMENTOS
 function createElement(value, element) { 
   const divcontainerHours = document.createElement("div")
   const divhours = document.createElement("div")
@@ -93,8 +94,7 @@ function createElement(value, element) {
 
   document.querySelector(`.${element}`).append(divcontainerHours)
 
-
-
+      // EVENTO DE REMOVER AGENDAMENTO
       const removeItem = document.querySelectorAll("a")
       const datePage = document.getElementById("date")
 
@@ -105,12 +105,12 @@ function createElement(value, element) {
       });
       }
 
-document.getElementById("date").addEventListener("change", () => {
-  const removeDOM = document.querySelectorAll(".containerHours")
-  removeDOM.forEach(element => element.remove())
+      document.getElementById("date").addEventListener("change", () => {
+        const removeDOM = document.querySelectorAll(".containerHours")
+        removeDOM.forEach(element => element.remove())
 
-  scheduling(date.value)
-  update(date.value)
+        scheduling(date.value)
+        update(date.value)
 })
 
 

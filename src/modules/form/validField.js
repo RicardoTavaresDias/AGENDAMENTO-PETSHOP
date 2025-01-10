@@ -29,7 +29,7 @@ document.querySelector("#phone").addEventListener("blur", () => {
   }
 }) 
 
-// VALEIDA CARACTERES
+// VALIDA CARACTERES
 function validCaracteres(value, mensage) {
   const id = document.querySelector("#" + value.slice(3, 10).toLowerCase())
   if (regex.test(id.value)) {
