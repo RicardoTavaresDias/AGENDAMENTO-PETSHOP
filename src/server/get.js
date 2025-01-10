@@ -4,7 +4,7 @@ import { alertError } from "../utils/alert.js"
 // EVENTO DE CONSULTA DE DADOS NA BASE DE DADOS
 export async function get(value) {
   try {
-      const get = await fetch(`${port}`)
+      const get = await fetch(`${port}?${value}`)
       const data = await get.json()
      
       return data 
