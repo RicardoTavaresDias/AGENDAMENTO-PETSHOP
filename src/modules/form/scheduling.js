@@ -1,9 +1,10 @@
 import { get } from "../../server/get.js"
+import { update } from "../load.js"
 const date = document.getElementById("date")
 
 export async function scheduling(value) {
   const products = await get(value)
-  console.log(value)
+
   products.forEach(element => { 
     const event = element.hour.split(":")[0]
     
@@ -95,5 +96,6 @@ document.getElementById("date").addEventListener("change", () => {
   removeDOM.forEach(element => element.remove())
 
   scheduling(date.value)
+  update(date.value)
 })
 
