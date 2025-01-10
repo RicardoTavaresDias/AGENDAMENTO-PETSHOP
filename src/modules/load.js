@@ -1,5 +1,5 @@
 import dayjs from "dayjs"
-import { get } from "../server/get.js"
+import { scheduling } from "../modules/form/scheduling.js"
 
 const button = document.getElementById("newSchedule")
 const main = document.querySelector("main")
@@ -23,10 +23,21 @@ button.addEventListener("click", () => {
   })
 })
 
-//CARREGAMENTO DA PAGINA.
-document.addEventListener("DOMContentLoaded", () => {
-  get(datePage.value)
-})
+scheduling(datePage.value)
+
+
+// //CARREGAMENTO DA PAGINA.
+// document.addEventListener("DOMContentLoaded", () => {
+   
+   
+//   // for (let i=hoursDate.length - 1; i >= 0; i--) {
+//   //   const option = document.createElement("option")
+//   //   option.value = `${hoursDate[i]}`
+//   //   option.textContent = `${hoursDate[i]}`
+//   //   datehour.prepend(option)
+//   // }
+//   //console.log(datehour)
+// })
 
 
 export { aside, main, button }

@@ -1,19 +1,41 @@
 import { get } from "../../server/get.js"
 const date = document.getElementById("date")
-const dateFormm = document.querySelector("#hour")
 
-export function scheduling(value) {
-  const teste = value
-  const hour = value[0]
-
-  const hours = hour.split(":")[0]
-      if (Number(hours) < 12) {
-        createElement(value, "morning")
-      } else if (Number(hours) >= 12 && Number(hours) < 18) {
-        createElement(value, "afternoon")
+export async function scheduling(value) {
+  const products = await get(value)
+  console.log(value)
+  products.forEach(element => { 
+    const event = element.hour.split(":")[0]
+    
+    if(element.date === value) {
+      if (Number(event) < 12) {
+        createElement(
+          [
+            element.hour, 
+            element.name, 
+            element.namepet, 
+            element.service
+          ], "morning")
+      } else if (Number(event) >= 12 && Number(event) < 18) {
+        createElement(
+          [
+            element.hour, 
+            element.name, 
+            element.namepet, 
+            element.service
+          ], "afternoon")
       }else {
-        createElement(value, "night")
+        createElement(
+          [
+            element.hour, 
+            element.name, 
+            element.namepet, 
+            element.service
+          ], "night")
       }
+
+    }
+  });   
 }
 
 
@@ -71,6 +93,7 @@ function createElement(value, element) {
 document.getElementById("date").addEventListener("change", () => {
   const removeDOM = document.querySelectorAll(".containerHours")
   removeDOM.forEach(element => element.remove())
-  get(date.value)
+
+  scheduling(date.value)
 })
 
