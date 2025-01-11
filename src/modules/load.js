@@ -31,11 +31,6 @@ button.addEventListener("click", () => {
 export async function update(value) {
   datehour.innerHTML = ""
   const data = await get(`date=${value}`)
-  const array = []
-  let arrayhour = hoursDate.slice()
-  
-
- 
 
       // filtro dos horarios depois do filtro filtrohoje apos busca da data atual
       const filttrohour = []
@@ -76,10 +71,9 @@ export async function update(value) {
             datehour.prepend(option)      
           }
       }
-      console.log(outroFiltro)
-
 }
 
+//EVENTO DA MUDANÇA DE DATA NO FORMULARIO
 dateForm.addEventListener("change", () => {
   update(dateForm.value)
 })
