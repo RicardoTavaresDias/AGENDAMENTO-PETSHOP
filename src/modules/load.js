@@ -7,7 +7,7 @@ const button = document.getElementById("newSchedule")
 const main = document.querySelector("main")
 const aside = document.querySelector("aside")
 const datePage = document.getElementById("date")
-const dateForm = document.getElementById("dateForm")
+export const dateForm = document.getElementById("dateForm")
 const datehour = document.getElementById("hour")
 
 export const datehoje = dayjs().format("YYYY-MM-DD")
@@ -32,44 +32,34 @@ export async function update(value) {
   datehour.innerHTML = ""
   const data = await get(`date=${value}`)
 
-      // filtro dos horarios depois do filtro filtrohoje apos busca da data atual
-      const filttrohour = []
-      
-      // filtro da base de dados com a data de hoje
-      const filtrohoje = data.filter(env => env.date === value)
+      let filter = []
 
-      // filtro dos horarios apos busca da data hoje
-      filtrohoje.forEach(hour => {
-        filttrohour.push(hour.hour)
-      })
-      
-      //resultado com filtro completo das data disponivel data atual
-      let outroFiltro = []
+      data.forEach(event => {
+        filter.push(event.hour)
+      })    
 
-      // filtro para horario disponivel na data atual
-      hoursDate.forEach(teste => {
-        if (teste != filttrohour.filter(env => env === teste)){
-          outroFiltro.push(teste)
-        }
-      })
-      
-      //filtra com horario atual, retira os horario que passou
-      let filtrohorarios = outroFiltro.filter(hour => hour > dayjs().format("HH:mm"))    
-
-      if (dateForm.value === datehoje){
-          for (let i = 0; filtrohorarios.length > i; i++){
+      filter = hoursDate.filter(
+        event => !filter.includes(event))
+        
+      const hourCurrent = filter.filter(
+        value => value > dayjs().format("HH:mm"))
+     
+      if (dateForm.value && datePage.value === datehoje){
+          for (let i = 0; hourCurrent.length > i; i++){
             const option = document.createElement("option")
-            option.value = filtrohorarios[i]
-            option.textContent = filtrohorarios[i]
+            option.value = hourCurrent[i]
+            option.textContent = hourCurrent[i]
             datehour.prepend(option)      
           }
+          console.log(hourCurrent)
       } else {
-          for (let i = 0; outroFiltro.length > i; i++){
+          for (let i = 0; filter.length > i; i++){
             const option = document.createElement("option")
-            option.value = outroFiltro[i]
-            option.textContent = outroFiltro[i]
+            option.value = filter[i]
+            option.textContent = filter[i]
             datehour.prepend(option)      
           }
+          console.log(filter)
       }
 }
 
@@ -78,6 +68,9 @@ dateForm.addEventListener("change", () => {
   update(dateForm.value)
 })
 
+datePage.addEventListener("change", () => {
+  dateForm.value = datePage.value
+})
 
 // CARREGAMENTO DA PAGINA, ATUALIZA
 export function toLoad(){
