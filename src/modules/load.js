@@ -34,16 +34,20 @@ export async function update(value) {
 
       let filter = []
 
+      //ADICIONA OS HORARIOS ENCONTRADO NA BASE DE DADOS
       data.forEach(event => {
         filter.push(event.hour)
       })    
 
+      //REALIZA UM FILTRO DOS HORARIOS DA BASE DAS 9H AS 21H E SE BATER COM HORARIOS DO FILTER REMOVE.
       filter = hoursDate.filter(
         event => !filter.includes(event))
-        
+
+      //REALIZA FILTRO DOS HORARIOS DO FILTER COM HORARIO ATUAL E REMOVE OS HORARIOS QUE JÁ PASSOU DO DIA ATUAL
       const hourCurrent = filter.filter(
         value => value > dayjs().format("HH:mm"))
      
+      //ADIONA O DOM PARA MOSTRAGEM DOS HORARIOS DISPONIVEL NO FORMULARIO
       if (dateForm.value && datePage.value === datehoje){
           for (let i = 0; hourCurrent.length > i; i++){
             const option = document.createElement("option")
@@ -51,7 +55,6 @@ export async function update(value) {
             option.textContent = hourCurrent[i]
             datehour.prepend(option)      
           }
-          console.log(hourCurrent)
       } else {
           for (let i = 0; filter.length > i; i++){
             const option = document.createElement("option")
@@ -59,7 +62,6 @@ export async function update(value) {
             option.textContent = filter[i]
             datehour.prepend(option)      
           }
-          console.log(filter)
       }
 }
 
